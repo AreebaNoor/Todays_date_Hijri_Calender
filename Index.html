@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      @font-face {
+        font-family: Gyahegi;
+        src: url("./Media/Garges.ttf")
+      }
+    </style>
+  </head>
+  <body>
+    <div id="mainContent">
+    </div>
+  </body>
+  <script>
+    let today = new Date();
+    let dd = String(today.getDate()).padStart(2, '0');
+    let mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    let yyyy = today.getFullYear();
+    today = dd + ' / ' + mm + ' / ' + yyyy;
+    
+    const MainContentDiv = document.getElementById("mainContent");
+    const title = document.createElement("p");
+    //const dateText = document.createTextNode("Date: ");
+    //title.appendChild(dateText);
+    MainContentDiv.appendChild(title);
+    title.innerHTML += today;
+    
+    //Here comes CSS styling in javascript
+    title.style.fontSize = "26px";
+    title.style.fontFamily = "Gyahegi";
+    title.style.margin = "5px";
+    title.style.textAlign = "center";
+    MainContentDiv.style.backgroundColor = "#f3f1f1";
+    MainContentDiv.style.padding = "5px";
+    
+  </script>
+</html>
