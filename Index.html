@@ -3,7 +3,7 @@
   <head>
     <style>
       @font-face {
-        font-family: Gyahegi;
+        font-family: Garges;
         src: url("./Media/Garges.ttf")
       }
     </style>
@@ -18,17 +18,21 @@
     let mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
     let yyyy = today.getFullYear();
     today = dd + ' / ' + mm + ' / ' + yyyy;
+
+    if (mm == "03") and ("23"<=dd<="31");
+
     
     const MainContentDiv = document.getElementById("mainContent");
     const title = document.createElement("p");
-    //const dateText = document.createTextNode("Date: ");
+    const underTitle = document.createElement("p");
     //title.appendChild(dateText);
     MainContentDiv.appendChild(title);
-    title.innerHTML += today;
+    MainContentDiv.appendChild(underTitle);
+    underTitle.innerHTML += today;
     
     //Here comes CSS styling in javascript
     title.style.fontSize = "26px";
-    title.style.fontFamily = "Gyahegi";
+    title.style.fontFamily = "Garges";
     title.style.margin = "5px";
     title.style.textAlign = "center";
     MainContentDiv.style.backgroundColor = "#f3f1f1";
