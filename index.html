@@ -105,6 +105,21 @@
       myRes[6] = im-1; //islamic month
       myRes[7] = iy; //islamic year
 
+      myRes[5] = string(myRes[5])
+
+      if (myRes[5] in [, "1", "21", "31"]){
+        myRes[5] += "st";
+      }
+      else if (myRes[5] in [, "2", "22"]) {
+        myRes[5] += "nd";
+      }
+      else if (myRes[5] = "3") {
+        myRes[5] += "rd";
+      }
+      else {
+        myRes[5] += "th";
+      }
+
       return myRes;
     }
     function writeIslamicDate(adjustment) {
