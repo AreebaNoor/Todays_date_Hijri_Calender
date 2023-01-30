@@ -106,17 +106,19 @@
       myRes[7] = iy; //islamic year
 
 
+      myRes[5] = String(myRes[5])
+
       if (myRes[5] in [, "1", "21", "31"]){
-        toString().myRes[5] += "st";
+        myRes[5] += "st";
       }
       else if (myRes[5] in [, "2", "22"]) {
-        toString().myRes[5] += "nd";
+        myRes[5] += "nd";
       }
       else if (myRes[5] == "3") {
-        toString().myRes[5] += "rd";
+        myRes[5] += "rd";
       }
       else {
-        toString().myRes[5] += "th";
+        myRes[5] += "th";
       }
 
       return myRes;
